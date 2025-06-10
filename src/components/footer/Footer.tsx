@@ -1,6 +1,11 @@
+import "./footer.scss"
+
 const Footer = () => {
   return (
-    <div className="footer" >Footer</div>
+    <div className="footer" >
+      <span>devanthonadmin</span>
+      <span>&copy; Devanthon Admin Dashboard</span>
+    </div>
   )
 }
 
