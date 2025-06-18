@@ -22,9 +22,11 @@
         }
       }
 
-       }
+      .userTexts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
 
-  .amount {
-    font-weight: 500;
-  }
+     
 }
