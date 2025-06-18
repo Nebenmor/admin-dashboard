@@ -1,8 +1,7 @@
-import Navbar from "../navbar/Navbar"
-import Menu from "../menu/Menu"
-import Footer from "../footer/Footer"
-import { Outlet } from "react-router-dom"
-
+import Navbar from "../navbar/Navbar";
+import Menu from "../menu/Menu";
+import Footer from "../footer/Footer";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
@@ -20,7 +19,7 @@ const Layout = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
