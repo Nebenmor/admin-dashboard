@@ -26,6 +26,11 @@
       height: 100%;
     }
 
-    }
+    .texts {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+  
   }
 }
