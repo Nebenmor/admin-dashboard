@@ -6,6 +6,14 @@ const DataTable = () => {
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
     {
+      field: "avatar",
+      headerName: "Avatar",
+      width: 100,
+      renderCell: (params) => {
+        return <img src={params.row.img || "/noavatar.png"} alt="avatar" />;
+      },
+    },
+    {
       field: "firstName",
       headerName: "First name",
       width: 150,
@@ -30,7 +38,7 @@ const DataTable = () => {
       description: "This column has a value getter and is not sortable.",
       sortable: false,
       width: 160,
-      valueGetter: (value, row) => {
+      valueGetter: (_, row) => {
         return `${row.firstName || ""} ${row.lastName || ""}`;
       },
     },
