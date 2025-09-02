@@ -14,5 +14,32 @@
       border-radius: 50%;
       object-fit: cover;
     }
+
+    .action {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      height: 100%;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      button.delete {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
   }
 }
