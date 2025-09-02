@@ -1,3 +1,11 @@
 .dataTable {
-    // 
+  .dataGrid {
+    background: white;
+    padding: 20px;
+
+    .MuiDataGrid-toolbar {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
 }

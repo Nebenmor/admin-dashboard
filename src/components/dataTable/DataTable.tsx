@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import "./dataTable.scss";
 
 const DataTable = () => {
-  const columns: GridColDef<(typeof rows)[number]>[] = [
+  const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
     {
       field: "firstName",
@@ -30,8 +30,9 @@ const DataTable = () => {
       description: "This column has a value getter and is not sortable.",
       sortable: false,
       width: 160,
-      valueGetter: (value, row) =>
-        `${row.firstName || ""} ${row.lastName || ""}`,
+      valueGetter: (value, row) => {
+        return `${row.firstName || ""} ${row.lastName || ""}`;
+      },
     },
   ];
 
@@ -50,6 +51,7 @@ const DataTable = () => {
   return (
     <div className="dataTable">
       <DataGrid
+        className="dataGrid"
         rows={rows}
         columns={columns}
         initialState={{
@@ -59,9 +61,19 @@ const DataTable = () => {
             },
           },
         }}
+        showToolbar
+        slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
+          },
+        }}
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        disableDensitySelector
+        disableColumnSelector
+        disableColumnFilter
       />
     </div>
   );

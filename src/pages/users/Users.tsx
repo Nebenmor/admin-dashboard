@@ -7,8 +7,9 @@ const Users = () => {
       <div className="info">
         <h1>Users</h1>
         <button>
-          <DataTable />
+          Add New User
         </button>
+        <DataTable />
       </div>
     </div>
   )
